@@ -3,11 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog-Website</title>
-    <link rel="stylesheet" href="./bootstrap.css" />
-    <link rel="stylesheet" href="style.css" />
+    <title>MindBlog</title>
+    <link rel="stylesheet" href="../bootstrap.css">
+    <link rel="stylesheet" href="../style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+      integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-
   <body>
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg shadow">
@@ -50,22 +56,14 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#">My Blog</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Contact</a>
             </li>
           </ul>
           <div>
-            <a href="./pages/login.html" class="btn btn-success" type="submit"
-              >Login</a
-            >
-            <a
-              href="./pages/signup.html"
-              class="btn btn-outline-success"
-              type="submit"
-              >Signup</a
-            >
+            <img src="../images/placeholder.png" alt="place holder" width="45px">
           </div>
         </div>
       </div>
@@ -98,7 +96,7 @@
         <!-- 01 -->
         <div class="col">
           <div class="card shadow-sm rounded">
-            <img src="./images/world.jpg" alt="world" class="blog-img" />
+            <img src="../images/world.jpg" alt="world" class="blog-img" />
             <div class="card-body">
               <h2>Exploring the Beauty of the World</h2>
               <p class="card-text">
@@ -113,7 +111,7 @@
         <div class="col">
           <div class="card shadow-sm rounded">
             <img
-              src="./images/breakfast.jpg"
+              src="../images/breakfast.jpg"
               alt="breakfast"
               class="blog-img"
             />
@@ -131,7 +129,7 @@
         <div class="col">
           <div class="card shadow-sm rounded">
             <img
-              src="./images/productivity.jpg"
+              src="../images/productivity.jpg"
               class="blog-img"
               alt="Productivity"
             />
@@ -148,7 +146,7 @@
         <!-- 04 -->
         <div class="col">
           <div class="card shadow-sm rounded">
-            <img src="./images/peace.jpg" alt="peace" class="blog-img" />
+            <img src="../images/peace.jpg" alt="peace" class="blog-img" />
             <div class="card-body">
               <h2>Small Habits, Big Changes</h2>
               <p class="card-text">
@@ -209,10 +207,13 @@
     <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 
     <!-- bootstrap JS -->
-    <script src="./bootstrap.js"></script>
+    <script src="../bootstrap.js"></script>
+
+    <!-- supabase JS -->
+    <script src="../supabase.js"></script>
 
     <!-- app JS -->
-    <script src="./supabase.js"></script>
-    
+    <script src="./home.js"></script>
+
   </body>
 </html>
