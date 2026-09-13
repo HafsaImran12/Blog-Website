@@ -4,10 +4,15 @@
     box-sizing: border-box;
 }
 
+:root{
+  --body:#FCF5EF; 
+  --light-green:rgb(205, 226, 205);
+}
+
 body{
     height: 100vh;
     font-family:Arial, Helvetica, sans-serif;
-    background-color: #FCF5EF !important;
+    background-color:var(--body) !important;
 }
 
 
@@ -29,4 +34,8 @@ body{
   height: 200px;
   object-fit: cover;
   display: block;
+}
+
+.home-clr{
+  background-color: var(--light-green);
 }

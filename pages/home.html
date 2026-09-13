@@ -36,173 +36,30 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Categories
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-              </ul>
-            </li>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link" href="#">My Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="btn text-success home-clr" aria-current="page" id="logout">Logout</a>
             </li>
           </ul>
-          <div>
-            <img src="../images/placeholder.png" alt="place holder" width="45px">
+          <div class="ms-3 dropdown">
+              <button class="btn home-clr p-2 rounded-circle dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                H
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+
           </div>
         </div>
       </div>
     </nav>
 
-    <!-- HERO -->
-
-    <div class="p-4 p-md-5 mb-4 text-light fw-bold shadow" id="hero-sec">
-      <div class="container-fluid">
-        <div class="col-lg-6 px-0 text-shadow text-start">
-          <h4 class="text-warning">Welcome to Mindful Blog</h4>
-          <h1 class="display-4">Ideas, Stories & Inspiration</h1>
-          <p class="lead my-3">
-            A space for curious minds. Discover inspiring stories,<br />
-            practical tips and refreshing ideas for a better you
-          </p>
-          <p class="lead mb-0">
-            <a href="#" class="text-white fw-bold shadow"
-              >Continue reading...</a
-            >
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- CARDS -->
-
-    <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
-        <!-- 01 -->
-        <div class="col">
-          <div class="card shadow-sm rounded">
-            <img src="../images/world.jpg" alt="world" class="blog-img" />
-            <div class="card-body">
-              <h2>Exploring the Beauty of the World</h2>
-              <p class="card-text">
-                Discover breathtaking destinations, hidden gems, and
-                unforgettable experiences from around the globe.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 02 -->
-        <div class="col">
-          <div class="card shadow-sm rounded">
-            <img
-              src="../images/breakfast.jpg"
-              alt="breakfast"
-              class="blog-img"
-            />
-            <div class="card-body">
-              <h2>A Perfect Start to Your Morning</h2>
-              <p class="card-text">
-                Discover delicious breakfast ideas, healthy morning meals, and
-                simple recipes to make your day start right.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 03 -->
-        <div class="col">
-          <div class="card shadow-sm rounded">
-            <img
-              src="../images/productivity.jpg"
-              class="blog-img"
-              alt="Productivity"
-            />
-            <div class="card-body">
-              <h2>Simple Habits for a More Productive Day</h2>
-              <p class="card-text">
-                Discover practical tips, smart routines, and easy habits to
-                manage your time and get more done.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 04 -->
-        <div class="col">
-          <div class="card shadow-sm rounded">
-            <img src="../images/peace.jpg" alt="peace" class="blog-img" />
-            <div class="card-body">
-              <h2>Small Habits, Big Changes</h2>
-              <p class="card-text">
-                Build simple daily habits that improve your focus, energy, and
-                overall lifestyle.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- FOOTER -->
-
-    <div class="container">
-      <div
-        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5 text-center text-success"
-      >
-        <!-- 01 -->
-        <div class="col d-flex align-items-start">
-          <img src="" alt="" />
-          <div>
-            <h3 class="fw-bold mb-0 fs-4">Read</h3>
-            <p>Explore new ideas and perspective.</p>
-          </div>
-        </div>
-
-        <!-- 02 -->
-        <div class="col d-flex align-items-start">
-          <img src="" alt="" />
-          <div>
-            <h3 class="fw-bold mb-0 fs-4">Learn</h3>
-            <p>Build new skills for your future.</p>
-          </div>
-        </div>
-
-        <!-- 03 -->
-        <div class="col d-flex align-items-start">
-          <img src="" alt="" />
-          <div>
-            <h3 class="fw-bold mb-0 fs-4">Grow</h3>
-            <p>Be a better version of your self.</p>
-          </div>
-        </div>
-
-        <!-- 04 -->
-        <div class="col d-flex align-items-start">
-          <img src="" alt="" />
-          <div>
-            <h3 class="fw-bold mb-0 fs-4">Together</h3>
-            <p>Join a community of dreamers.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
+               </div>
     <!-- supabase JS -->
     <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 

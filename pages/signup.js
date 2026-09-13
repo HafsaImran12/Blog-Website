@@ -1,4 +1,5 @@
 const signUpBtn = document.querySelector("#signup");
+const name = document.querySelector("#name");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 
@@ -18,6 +19,10 @@ signUpBtn.addEventListener("click", async (event) => {
     } else {
       console.log(error.message);
     }
+
+    const { error: } = await client
+  .from('user_table')
+  .insert({ id, name: name })
 
     window.location.href = "./home.html";
   } catch (error) {
