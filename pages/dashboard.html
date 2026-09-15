@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../bootstrap.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+      integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg shadow-sm text-center" id="navbar">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand fw-bold text-dark-green fs-4" id="logo">
+          Mindful Blog
+        </a>
+
+        <!-- Mobile Navbar Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Navbar Links -->
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link"> Home </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Categories
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#"> Travel </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#"> Lifestyle </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#"> Technology </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#"> Food </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#"> Personal Growth </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link"> About </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link"> Contact </a>
+            </li>
+          </ul>
+
+          <!-- User Profile -->
+          <div
+            class="userProfile bg-dark-green text-white rounded-circle d-none d-lg-flex align-items-center justify-content-center py-1 px-2"
+          >
+            HI
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= DESKTOP SIDEBAR ================= -->
+
+    <div
+      class="d-none d-lg-flex flex-column flex-shrink-0 p-3 pt-5"
+      id="sidebar"
+    >
+      <!-- Sidebar Links -->
+
+      <ul class="nav nav-pills flex-column mb-auto">
+        <!-- Dashboard -->
+
+        <li class="nav-item">
+          <a
+            href="./dashboard.html"
+            class="nav-link text-white link active"
+            aria-current="page"
+          >
+            <i class="fa-regular fa-house me-2"></i>
+            Dashboard
+          </a>
+        </li>
+
+        <!-- Create Post -->
+
+        <li>
+          <a href="./createPost.html" class="nav-link text-white link">
+            <i class="fa-solid fa-pen-to-square me-2"></i>
+            Create Post
+          </a>
+        </li>
+
+        <!-- My Post -->
+
+        <li>
+          <a href="./myPost.html" class="nav-link text-white link">
+            <i class="fa-regular fa-file-lines me-2"></i>
+            My Post
+          </a>
+        </li>
+
+        <!-- Logout -->
+
+        <li>
+          <a href="#" class="nav-link text-white link logout">
+            <i class="fa-solid fa-right-from-bracket me-2"></i>
+            Logout
+          </a>
+        </li>
+      </ul>
+
+      <hr />
+
+      <!-- Profile Dropdown -->
+
+      <div class="dropdown">
+        <a
+          href="#"
+          class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <!-- Initials -->
+
+          <div
+            class="userProfile lightOrange-clr text-dark-green rounded-circle d-flex align-items-center justify-content-center p-2 me-3"
+          ></div>
+
+          <!-- Name -->
+
+          <strong class="userName"></strong>
+        </a>
+
+        <ul class="dropdown-menu dropdown-menu-end text-small shadow">
+          <li>
+            <a class="dropdown-item userName" href="#"></a>
+          </li>
+
+          <li>
+            <a class="dropdown-item userEmail" href="#"></a>
+          </li>
+
+          <li>
+            <hr class="dropdown-divider" />
+          </li>
+
+          <li>
+            <a class="dropdown-item logout" href="#"> Sign out </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ================= MOBILE SIDEBAR ================= -->
+
+    <div class="d-flex d-lg-none flex-column flex-shrink-0" id="mobileSidebar">
+      <!-- Mobile Links -->
+
+      <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+        <!-- Dashboard -->
+
+        <li>
+          <a
+            href="./dashboard.html"
+            class="nav-link active py-3 border-bottom rounded-0"
+            aria-current="page"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            title="Dashboard"
+          >
+            <i class="fa-regular fa-house fs-5"></i>
+          </a>
+        </li>
+
+        <!-- Create Post -->
+
+        <li>
+          <a
+            href="./createPost.html"
+            class="nav-link py-3 border-bottom text-white rounded-0"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            title="Create Post"
+          >
+            <i class="fa-solid fa-pen-to-square fs-5"></i>
+          </a>
+        </li>
+
+        <!-- My Post -->
+
+        <li>
+          <a
+            href="./myPost.html"
+            class="nav-link py-3 border-bottom text-white rounded-0"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            title="My Post"
+          >
+            <i class="fa-regular fa-file-lines fs-5"></i>
+          </a>
+        </li>
+
+        <!-- Logout -->
+
+        <li>
+          <a
+            href="#"
+            class="nav-link py-3 border-bottom text-white rounded-0 logout"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            title="Logout"
+          >
+            <i class="fa-solid fa-right-from-bracket fs-5"></i>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile User -->
+
+      <div class="dropdown border-top">
+        <a
+          href="#"
+          class="d-flex align-items-center justify-content-center p-2 text-white text-decoration-none dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <div
+            class="userProfile bg-white text-dark-green p-2 rounded-circle d-flex align-items-center justify-content-center"
+          ></div>
+        </a>
+
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+          <li>
+            <a class="dropdown-item userName" href="#"></a>
+          </li>
+
+          <li>
+            <a class="dropdown-item userEmail" href="#"></a>
+          </li>
+
+          <li>
+            <hr class="dropdown-divider" />
+          </li>
+
+          <li>
+            <a class="dropdown-item logout" href="#"> Sign out </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ================= DASHBOARD CONTENT ================= -->
+
+    <main class="main-content">
+      <div class="container-fluid p-2 p-lg-4">
+
+        <!-- Welcome User -->
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div>
+            <p class="text-dark-green mb-1">Welcome Back 🌿</p>
+
+            <h1 class="fw-bold">Hello, <span class="userName">Hafsa</span>!</h1>
+
+            <p class="text-muted mb-0">
+              Here's what's happening with your blog today.
+            </p>
+          </div>
+
+          <!-- New Post Button -->
+
+          <a
+            href="./createPost.html"
+            class="d-none d-md-flex btn bg-dark-green text-white align-items-center post-btn"
+          >
+            <i class="fa-solid fa-plus me-2"></i>
+            New Post
+          </a>
+        </div>
+
+        <!-- ================= STATISTICS ================= -->
+
+        <div class="row g-4 mb-4 text-start">
+          <!-- Total Posts -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card shadow statictics h-100">
+              <div class="card-body dashboard p-4">
+                <div class="d-flex justify-content-start align-items-center">
+                  <div
+                    class="post-icon rounded-circle d-flex align-items-center justify-content-center"
+                  >
+                    <i class="fa-regular fa-file-lines"></i>
+                  </div>
+
+                  <div>
+                    <p class="text-muted mb-1 ps-3">Total Posts</p>
+                    <h2 class="fw-bold mb-0 ps-3">4</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Published -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card shadow statictics h-100">
+              <div class="card-body dashboard p-4">
+                <div class="d-flex justify-content-start align-items-center">
+                  <div
+                    class="published-icon rounded-circle d-flex align-items-center justify-content-center"
+                  >
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+
+                  <div>
+                    <p class="text-muted mb-1 ps-3">Published</p>
+                    <h2 class="fw-bold mb-0 ps-3">2</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drafts -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card shadow statictics h-100">
+              <div class="card-body dashboard p-4">
+                <div class="d-flex justify-content-start align-items-center">
+                  <div
+                    class="draft-icon rounded-circle d-flex align-items-center justify-content-center"
+                  >
+                    <i class="fa-regular fa-pen-to-square"></i>
+                  </div>
+
+                  <div>
+                    <p class="text-muted mb-1 ps-3">Drafts</p>
+                    <h2 class="fw-bold mb-0 ps-3">1</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Total Views -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card shadow statictics h-100">
+              <div class="card-body dashboard p-4">
+                <div class="d-flex justify-content-start align-items-center">
+                  <div
+                    class="view-icon rounded-circle d-flex align-items-center justify-content-center"
+                  >
+                    <i class="fa-regular fa-eye"></i>
+                  </div>
+
+                  <div>
+                    <p class="text-muted mb-1 ps-3">Total Views</p>
+                    <h2 class="fw-bold mb-0 ps-3">122</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= RECENT POSTS ================= -->
+
+        <div class="row g-4">
+          <div class="col-12 col-lg-8">
+            <div class="card shadow recent-posts h-100 ">
+              <div class="dashboard-card p-4 d-flex flex-column gap-5">
+                <!-- Header -->
+                <div
+                  class="d-flex justify-content-between align-items-center"
+                >
+                  <div>
+                    <h4 class="fw-bold mb-1">Recent Posts</h4>
+                    <p class="text-muted mb-0">Your latest blog posts</p>
+                  </div>
+
+                  <a
+                    href="./myPost.html"
+                    class="text-dark-green text-decoration-none"
+                  >
+                    View All →
+                  </a>
+                </div>
+
+                <!-- Post 1 -->
+                <div class="recent-post d-flex align-items-center gap-3">
+                  <div
+                    class="post-img d-flex align-items-center justify-content-center"
+                  >
+                    <img src="../images/post1.jpg" alt="post" class="img-fluid">
+                  </div>
+
+                  <div class="flex-grow-1">
+                    <h6 class="fw-bold mb-1">
+                      Top 5 Beautiful Places to Visit in Pakistan
+                    </h6>
+
+                    <small class="text-muted"> Travel · Sep 10, 2025 </small>
+                  </div>
+
+                </div>
+
+                <!-- Post 2 -->
+                <div class="recent-post d-flex align-items-center gap-3">
+                  <div
+                    class="post-img d-flex align-items-center justify-content-center"
+                  >
+                    <img src="../images/post2.webp" alt="post" class="img-fluid">
+                  </div>
+
+                  <div class="flex-grow-1">
+                    <h6 class="fw-bold mb-1">Best Tools for Productivity</h6>
+
+                    <small class="text-muted"> Technology · Sep 8, 2025 </small>
+                  </div>
+
+                </div>
+
+                <!-- Post 3 -->
+                <div class=" d-flex align-items-center gap-3">
+                  <div
+                    class="post-img d-flex align-items-center justify-content-center"
+                  >
+                    <img src="../images/post3.jpg" alt="post" class="img-fluid">
+                  </div>
+
+                  <div class="flex-grow-1">
+                    <h6 class="fw-bold mb-1">Easy & Healthy Breakfast Ideas</h6>
+
+                    <small class="text-muted"> Food · Sep 6, 2025 </small>
+                  </div>
+
+                </div>
+                <!-- Post 4 -->
+                <div class="recent-post d-flex align-items-center gap-3">
+                  <div
+                    class="post-img d-flex align-items-center justify-content-center"
+                  >
+                    <img src="../images/post4.jpg" alt="post" class="img-fluid">
+                  </div>
+
+                  <div class="flex-grow-1">
+                    <h6 class="fw-bold mb-1">Easy & Healthy Breakfast Ideas</h6>
+
+                    <small class="text-muted"> Food · Sep 6, 2025 </small>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= QUICK ACTIONS ================= -->
+
+          <div class="col-lg-4">
+            <div class="dashboard-card p-4">
+              <h4 class="fw-bold mb-4">Quick Actions</h4>
+
+              <a href="./createPost.html" class="quick-action">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <span>Create New Post</span>
+                <i class="fa-solid fa-arrow-right ms-auto"></i>
+              </a>
+
+              <a href="./myPost.html" class="quick-action">
+                <i class="fa-regular fa-file-lines"></i>
+                <span>Manage My Posts</span>
+                <i class="fa-solid fa-arrow-right ms-auto"></i>
+              </a>
+
+              <a href="#" class="quick-action">
+                <i class="fa-regular fa-user"></i>
+                <span>View Profile</span>
+                <i class="fa-solid fa-arrow-right ms-auto"></i>
+              </a>
+            </div>
+
+            <!-- Categories -->
+
+            <div class="dashboard-card p-4 mt-4">
+              <h4 class="fw-bold mb-4">Categories</h4>
+
+              <div class="category-row">
+                <span>Travel</span>
+                <strong>4</strong>
+              </div>
+
+              <div class="category-row">
+                <span>Lifestyle</span>
+                <strong>3</strong>
+              </div>
+
+              <div class="category-row">
+                <span>Technology</span>
+                <strong>2</strong>
+              </div>
+
+              <div class="category-row">
+                <span>Food</span>
+                <strong>2</strong>
+              </div>
+
+              <div class="category-row">
+                <span>Personal Growth</span>
+                <strong>1</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- supabase JS -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
+    <!-- bootstrap JS -->
+    <script src="../bootstrap.js"></script>
+
+    <!-- supabase JS -->
+    <script src="../supabase.js"></script>
+
+    <!-- app JS -->
+    <script src="../js/dashboard.js"></script>
+  </body>
+</html>

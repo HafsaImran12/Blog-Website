@@ -33,7 +33,7 @@
                   type="email"
                   id="email"
            
-                  class="form-control form-control-lg"
+                  class="form-control "
                   required
                 />
               </div>
@@ -46,17 +46,17 @@
                   type="password"
                   id="password"
                  
-                  class="form-control form-control-lg"
+                  class="form-control "
                   required
                 />
               </div>
 
               <!-- Sign Up -->
-              <div class="text-center mt-4">
+              <div class="text-center mt-4 ">
                 <button
                   type="submit"
                   id="loginBtn"
-                  class="btn btn-success w-50"
+                  class="btn text-white login-btn bg-dark-green w-50"
                 >
                   Login
                 </button>
@@ -71,7 +71,7 @@
             </div>
 
             <div class="text-center mt-3">
-              <a href="../index.html" class="text-decoration-none text-success"
+              <a href="../index.html" class="text-decoration-none text-dark-green"
                 ><i class="fa-solid fa-arrow-left"></i> Back to home
               </a>
             </div>
@@ -79,8 +79,11 @@
         </div>
       </div>
     </div>
-    <!-- supabase JS -->
+    <!-- supabase -->
     <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    
+           <!-- sweetalert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- bootstrap JS -->
     <script src="../bootstrap.js"></script>
@@ -89,6 +92,6 @@
     <script src="../supabase.js"></script>
 
     <!-- login JS -->
-    <script src="./login.js"></script>
+    <script src="../js/login.js"></script>
   </body>
 </html>

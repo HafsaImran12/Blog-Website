@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Post</title>
+    <link rel="stylesheet" href="../bootstrap.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+      integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg shadow-sm text-center" id="navbar">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand fw-bold text-dark-green fs-4" id="logo">
+          Mindful Blog
+        </a>
+
+        <!-- Mobile Navbar Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Navbar Links -->
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link"> Home </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Categories
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#"> Travel </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#"> Lifestyle </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#"> Technology </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#"> Food </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#"> Personal Growth </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link"> About </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link"> Contact </a>
+            </li>
+          </ul>
+
+          <!-- User Profile -->
+          <div
+            class="userProfile bg-dark-green text-white rounded-circle d-none d-lg-flex align-items-center justify-content-center py-1 px-2"
+          >
+            HI
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= DESKTOP SIDEBAR ================= -->
+
+    <div
+      class="d-none d-lg-flex flex-column flex-shrink-0 p-3 pt-5"
+      id="sidebar"
+    >
+      <!-- Sidebar Links -->
+
+      <ul class="nav nav-pills flex-column mb-auto">
+        <!-- Dashboard -->
+
+        <li class="nav-item">
+          <a
+            href="./dashboard.html"
+            class="nav-link text-white link"
+            aria-current="page"
+          >
+            <i class="fa-regular fa-house me-2"></i>
+            Dashboard
+          </a>
+        </li>
+
+        <!-- Create Post -->
+
+        <li>
+          <a href="./createPost.html" class="nav-link active text-white link">
+            <i class="fa-solid fa-pen-to-square me-2"></i>
+            Create Post
+          </a>
+        </li>
+
+        <!-- My Post -->
+
+        <li>
+          <a href="./myPost.html" class="nav-link text-white link">
+            <i class="fa-regular fa-file-lines me-2"></i>
+            My Post
+          </a>
+        </li>
+
+        <!-- Logout -->
+
+        <li>
+          <a href="#" class="nav-link text-white link logout">
+            <i class="fa-solid fa-right-from-bracket me-2"></i>
+            Logout
+          </a>
+        </li>
+      </ul>
+
+      <hr />
+
+      <!-- Profile Dropdown -->
+
+      <div class="dropdown">
+        <a
+          href="#"
+          class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <!-- Initials -->
+
+          <div
+            class="userProfile lightOrange-clr text-dark-green rounded-circle d-flex align-items-center justify-content-center p-2 me-3"
+          ></div>
+
+          <!-- Name -->
+
+          <strong class="userName"></strong>
+        </a>
+
+        <ul class="dropdown-menu dropdown-menu-end text-small shadow">
+          <li>
+            <a class="dropdown-item userName" href="#"></a>
+          </li>
+
+          <li>
+            <a class="dropdown-item userEmail" href="#"></a>
+          </li>
+
+          <li>
+            <hr class="dropdown-divider" />
+          </li>
+
+          <li>
+            <a class="dropdown-item logout" href="#"> Sign out </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ================= MOBILE SIDEBAR ================= -->
+
+    <div class="d-flex d-lg-none flex-column flex-shrink-0" id="mobileSidebar">
+      <!-- Mobile Links -->
+
+      <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+        <!-- Dashboard -->
+
+        <li>
+          <a
+            href="./dashboard.html"
+            class="nav-link active py-3 border-bottom rounded-0"
+            aria-current="page"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            title="Dashboard"
+          >
+            <i class="fa-regular fa-house fs-5"></i>
+          </a>
+        </li>
+
+        <!-- Create Post -->
+
+        <li>
+          <a
+            href="./createPost.html"
+            class="nav-link py-3 border-bottom text-white rounded-0"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            title="Create Post"
+          >
+            <i class="fa-solid fa-pen-to-square fs-5"></i>
+          </a>
+        </li>
+
+        <!-- My Post -->
+
+        <li>
+          <a
+            href="./myPost.html"
+            class="nav-link py-3 border-bottom text-white rounded-0"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            title="My Post"
+          >
+            <i class="fa-regular fa-file-lines fs-5"></i>
+          </a>
+        </li>
+
+        <!-- Logout -->
+
+        <li>
+          <a
+            href="#"
+            class="nav-link py-3 border-bottom text-white rounded-0 logout"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            title="Logout"
+          >
+            <i class="fa-solid fa-right-from-bracket fs-5"></i>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile User -->
+
+      <div class="dropdown border-top">
+        <a
+          href="#"
+          class="d-flex align-items-center justify-content-center p-2 text-white text-decoration-none dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <div
+            class="userProfile bg-white text-dark-green p-2 rounded-circle d-flex align-items-center justify-content-center"
+          ></div>
+        </a>
+
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+          <li>
+            <a class="dropdown-item userName" href="#"></a>
+          </li>
+
+          <li>
+            <a class="dropdown-item userEmail" href="#"></a>
+          </li>
+
+          <li>
+            <hr class="dropdown-divider" />
+          </li>
+
+          <li>
+            <a class="dropdown-item logout" href="#"> Sign out </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ================= CREATE POST ================= -->
+    <div class=" main-content">
+      <!-- Header -->
+<div></div>
+    <div class="container">
+        <form>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >We'll never share your email with anyone else.</small
+          >
+        </div>
+      
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+          />
+        </div>
+      
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1"
+            >Check me out</label
+          >
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Post</button>
+
+      </form>
+
+    </div>
+
+    </div>
+
+    <!-- supabase JS -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
+    <!-- bootstrap JS -->
+    <script src="../bootstrap.js"></script>
+
+    <!-- supabase JS -->
+    <script src="../supabase.js"></script>
+
+    <!-- app JS -->
+    <script src="../js/dashboard.js"></script>
+  </body>
+</html>

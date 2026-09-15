@@ -26,27 +26,15 @@
             <form id="signupForm">
               <!-- Name -->
               <div class="mb-3">
-                <label for="name" class="form-label" id="name">Name</label>
-                
-                <input
-                type="text"
-                id="text"
-                
-                class="form-control"
-                required
-                />
+                <label for="name" class="form-label">Name</label>
+
+                <input type="text" id="name" class="form-control" required />
               </div>
               <!-- Email -->
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
 
-                <input
-                  type="email"
-                  id="email"
-            
-                  class="form-control"
-                  required
-                />
+                <input type="email" id="email" class="form-control" required />
               </div>
 
               <!-- Password -->
@@ -55,7 +43,6 @@
                 <input
                   type="password"
                   id="password"
-          
                   class="form-control"
                   required
                 />
@@ -63,11 +50,7 @@
 
               <!-- Sign Up -->
               <div class="text-center">
-                <button
-                  type="submit"
-                  id="signup"
-                  class="btn btn-success w-50"
-                >
+                <button type="submit" id="signup" class="btn login-btn bg-dark-green text-white w-50">
                   SignUp
                 </button>
               </div>
@@ -81,7 +64,7 @@
             </div>
 
             <div class="text-center mt-3">
-              <a href="../index.html" class="text-decoration-none text-success"
+              <a href="../index.html" class="text-decoration-none text-dark-green"
                 ><i class="fa-solid fa-arrow-left"></i> Back to home
               </a>
             </div>
@@ -90,16 +73,20 @@
       </div>
     </div>
 
-    <!-- supabase JS -->
+    <!-- supabase -->
     <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
+    <!-- sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- bootstrap JS -->
     <script src="../bootstrap.js"></script>
+    
 
     <!-- supabase JS -->
     <script src="../supabase.js"></script>
 
     <!-- signup JS -->
-    <script src="./signup.js"></script>
+    <script src="../js/signup.js"></script>
   </body>
 </html>
