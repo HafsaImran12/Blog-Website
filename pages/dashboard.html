@@ -99,10 +99,7 @@
 
     <!-- ================= DESKTOP SIDEBAR ================= -->
 
-    <div
-      class="d-none d-lg-flex flex-column flex-shrink-0 p-3 pt-5"
-      id="sidebar"
-    >
+    <div class="d-none d-lg-flex flex-column flex-shrink-0 p-3" id="sidebar">
       <!-- Sidebar Links -->
 
       <ul class="nav nav-pills flex-column mb-auto">
@@ -291,7 +288,6 @@
 
     <main class="main-content">
       <div class="container-fluid p-2 p-lg-4">
-
         <!-- Welcome User -->
 
         <div class="d-flex justify-content-between align-items-center mb-4">
@@ -403,13 +399,11 @@
         <!-- ================= RECENT POSTS ================= -->
 
         <div class="row g-4">
-          <div class="col-12 col-lg-8">
-            <div class="card shadow recent-posts h-100 ">
-              <div class="dashboard-card p-4 d-flex flex-column gap-5">
+          <div class="col-12">
+            <div class="card shadow recent-posts h-100">
+              <div class="dashboard-card p-4 d-flex flex-column gap-4">
                 <!-- Header -->
-                <div
-                  class="d-flex justify-content-between align-items-center"
-                >
+                <div class="d-flex justify-content-between align-items-center">
                   <div>
                     <h4 class="fw-bold mb-1">Recent Posts</h4>
                     <p class="text-muted mb-0">Your latest blog posts</p>
@@ -424,11 +418,17 @@
                 </div>
 
                 <!-- Post 1 -->
-                <div class="recent-post d-flex align-items-center gap-3">
+                <div
+                  class="card recent-post d-flex flex-row align-items-center gap-4 p-2"
+                >
                   <div
-                    class="post-img d-flex align-items-center justify-content-center"
+                    class="post-img d-flex align-items-center justify-content-center rounded-2"
                   >
-                    <img src="../images/post1.jpg" alt="post" class="img-fluid">
+                    <img
+                      src="../images/post1.jpg"
+                      alt="post"
+                      class="img-fluid"
+                    />
                   </div>
 
                   <div class="flex-grow-1">
@@ -438,15 +438,20 @@
 
                     <small class="text-muted"> Travel · Sep 10, 2025 </small>
                   </div>
-
                 </div>
 
                 <!-- Post 2 -->
-                <div class="recent-post d-flex align-items-center gap-3">
+                <div
+                  class="card recent-post d-flex flex-row align-items-center p-2 gap-4"
+                >
                   <div
-                    class="post-img d-flex align-items-center justify-content-center"
+                    class="post-img d-flex align-items-center justify-content-center rounded-2"
                   >
-                    <img src="../images/post2.webp" alt="post" class="img-fluid">
+                    <img
+                      src="../images/post2.webp"
+                      alt="post"
+                      class="img-fluid"
+                    />
                   </div>
 
                   <div class="flex-grow-1">
@@ -454,15 +459,20 @@
 
                     <small class="text-muted"> Technology · Sep 8, 2025 </small>
                   </div>
-
                 </div>
 
                 <!-- Post 3 -->
-                <div class=" d-flex align-items-center gap-3">
+                <div
+                  class="card recent-post d-flex flex-row align-items-center p-2 gap-4"
+                >
                   <div
-                    class="post-img d-flex align-items-center justify-content-center"
+                    class="post-img d-flex align-items-center justify-content-center rounded-2"
                   >
-                    <img src="../images/post3.jpg" alt="post" class="img-fluid">
+                    <img
+                      src="../images/post3.jpg"
+                      alt="post"
+                      class="img-fluid"
+                    />
                   </div>
 
                   <div class="flex-grow-1">
@@ -470,14 +480,19 @@
 
                     <small class="text-muted"> Food · Sep 6, 2025 </small>
                   </div>
-
                 </div>
                 <!-- Post 4 -->
-                <div class="recent-post d-flex align-items-center gap-3">
+                <div
+                  class="card recent-post d-flex flex-row align-items-center p-2 gap-4"
+                >
                   <div
-                    class="post-img d-flex align-items-center justify-content-center"
+                    class="post-img d-flex align-items-center justify-content-center rounded-2"
                   >
-                    <img src="../images/post4.jpg" alt="post" class="img-fluid">
+                    <img
+                      src="../images/post4.jpg"
+                      alt="post"
+                      class="img-fluid"
+                    />
                   </div>
 
                   <div class="flex-grow-1">
@@ -485,70 +500,12 @@
 
                     <small class="text-muted"> Food · Sep 6, 2025 </small>
                   </div>
-
                 </div>
-
-              </div>
-            </div>
-          </div>
-
-          <!-- ================= QUICK ACTIONS ================= -->
-
-          <div class="col-lg-4">
-            <div class="dashboard-card p-4">
-              <h4 class="fw-bold mb-4">Quick Actions</h4>
-
-              <a href="./createPost.html" class="quick-action">
-                <i class="fa-solid fa-pen-to-square"></i>
-                <span>Create New Post</span>
-                <i class="fa-solid fa-arrow-right ms-auto"></i>
-              </a>
-
-              <a href="./myPost.html" class="quick-action">
-                <i class="fa-regular fa-file-lines"></i>
-                <span>Manage My Posts</span>
-                <i class="fa-solid fa-arrow-right ms-auto"></i>
-              </a>
-
-              <a href="#" class="quick-action">
-                <i class="fa-regular fa-user"></i>
-                <span>View Profile</span>
-                <i class="fa-solid fa-arrow-right ms-auto"></i>
-              </a>
-            </div>
-
-            <!-- Categories -->
-
-            <div class="dashboard-card p-4 mt-4">
-              <h4 class="fw-bold mb-4">Categories</h4>
-
-              <div class="category-row">
-                <span>Travel</span>
-                <strong>4</strong>
-              </div>
-
-              <div class="category-row">
-                <span>Lifestyle</span>
-                <strong>3</strong>
-              </div>
-
-              <div class="category-row">
-                <span>Technology</span>
-                <strong>2</strong>
-              </div>
-
-              <div class="category-row">
-                <span>Food</span>
-                <strong>2</strong>
-              </div>
-
-              <div class="category-row">
-                <span>Personal Growth</span>
-                <strong>1</strong>
               </div>
             </div>
           </div>
         </div>
+        
       </div>
     </main>
 
@@ -561,7 +518,7 @@
     <!-- supabase JS -->
     <script src="../supabase.js"></script>
 
-    <!-- app JS -->
+    <!-- dashboard JS -->
     <script src="../js/dashboard.js"></script>
   </body>
 </html>

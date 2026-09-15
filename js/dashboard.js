@@ -4,7 +4,6 @@ const logouts = document.querySelectorAll(".logout");
 const userName = document.querySelectorAll(".userName");
 
 async function getUser() {
-  console.log("run");
 
   // ================== getUser ==================
 
@@ -13,7 +12,6 @@ async function getUser() {
     data: { user },
   } = await client.auth.getUser();
 
-  console.log(user.email);
   userEmail.forEach((email) => {
     email.innerHTML = user.email;
   });
@@ -24,11 +22,9 @@ async function getUser() {
     .select("name")
     .eq("user_id", user.id);
 
-  console.log(data);
 
   // ----- GET NAME -----
   let name = data[0].name;
-  console.log(name);
 
   userName.forEach((element) => {
     element.innerHTML = name;
@@ -40,7 +36,6 @@ async function getUser() {
     .split(" ")
     .map((word) => word[0])
     .join("");
-  console.log(initials);
 
   userProfile.forEach((profile) => {
     profile.innerHTML = initials;

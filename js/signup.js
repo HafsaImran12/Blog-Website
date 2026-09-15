@@ -9,6 +9,7 @@ signUpBtn.addEventListener("click", async (event) => {
 
   try {
     // ================== Empty Field Check ==================
+    
     let emptyField = false;
 
     inputs.forEach((input) => {
@@ -21,6 +22,7 @@ signUpBtn.addEventListener("click", async (event) => {
     if (emptyField) return;
 
     // ================== Signup ==================
+
     const { data, error } = await client.auth.signUp({
       email: email.value,
       password: password.value,
@@ -42,6 +44,7 @@ signUpBtn.addEventListener("click", async (event) => {
     console.log("Signup Data:", data);
 
     // ================== Get User ID ==================
+    
     const id = data.user?.id;
 
     console.log("User ID:", id);
@@ -52,6 +55,7 @@ signUpBtn.addEventListener("click", async (event) => {
     }
 
     // ================== User Name Insert ==================
+
     const { error: databaseError } = await client
       .from("user_data")
       .insert({

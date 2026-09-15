@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create Post</title>
+    <title>My Posts</title>
     <link rel="stylesheet" href="../bootstrap.css" />
     <link rel="stylesheet" href="../style.css" />
     <link
@@ -15,6 +15,7 @@
     />
   </head>
   <body>
+    
     <!-- ================= NAVBAR ================= -->
 
     <nav class="navbar navbar-expand-lg shadow-sm text-center" id="navbar">
@@ -119,7 +120,7 @@
         <!-- Create Post -->
 
         <li>
-          <a href="./createPost.html" class="nav-link active text-white link">
+          <a href="./createPost.html" class="nav-link text-white link">
             <i class="fa-solid fa-pen-to-square me-2"></i>
             Create Post
           </a>
@@ -128,7 +129,7 @@
         <!-- My Post -->
 
         <li>
-          <a href="./myPost.html" class="nav-link text-white link">
+          <a href="./myPost.html" class="nav-link active link">
             <i class="fa-regular fa-file-lines me-2"></i>
             My Post
           </a>
@@ -185,7 +186,6 @@
         </ul>
       </div>
     </div>
-
     <!-- ================= MOBILE SIDEBAR ================= -->
 
     <div class="d-flex d-lg-none flex-column flex-shrink-0" id="mobileSidebar">
@@ -197,7 +197,7 @@
         <li>
           <a
             href="./dashboard.html"
-            class="nav-link active py-3 border-bottom rounded-0"
+            class="nav-link text-white py-3 border-bottom rounded-0"
             aria-current="page"
             data-bs-toggle="tooltip"
             data-bs-placement="right"
@@ -226,7 +226,7 @@
         <li>
           <a
             href="./myPost.html"
-            class="nav-link py-3 border-bottom text-white rounded-0"
+            class="nav-link active py-3 border-bottom text-white rounded-0"
             data-bs-toggle="tooltip"
             data-bs-placement="right"
             title="My Post"
@@ -284,97 +284,7 @@
       </div>
     </div>
 
-    <!-- ================= CREATE POST ================= -->
-    <div class="main-content">
-      <!-- Header -->
-      <div class="container px-2 px-lg-5 py-4">
-        <div>
-          <h2 class="fw-bold">Create Post</h2>
-          <p class="border-bottom pb-4">
-            Share your thoughts, ideas and stories with the world.
-          </p>
-        </div>
-
-        <!-- Create Post Form -->
-        <form id="blogPost">
-          <!-- Post Title -->
-          <div class="mb-4">
-            <label for="postTitle" class="form-label fw-semibold">
-              Post Title
-            </label>
-
-            <input
-              type="text"
-              class="form-control"
-              id="postTitle"
-              name="title"
-              placeholder="Enter your post title"
-            />
-          </div>
-
-          <!-- Category -->
-          <div class="mb-4">
-            <label for="category" class="form-label fw-semibold">
-              Category
-            </label>
-
-            <select class="form-select" name="category">
-              <option value="" selected disabled>Select a category</option>
-              <option value="Travel">Travel</option>
-              <option value="Lifestyle">Lifestyle</option>
-              <option value="Technology">Technology</option>
-              <option value="Food">Food</option>
-              <option value="Personal Growth">Personal Growth</option>
-            </select>
-          </div>
-
-          <!-- Featured Image -->
-          <div class="mb-4">
-            <label for="postImage" class="form-label fw-semibold">
-              Featured Image
-            </label>
-
-            <input
-              type="file"
-              class="form-control"
-              id="postImage"
-              accept="image/*"
-            />
-
-            <small class="text-muted">
-              Upload an image for your blog post.
-            </small>
-          </div>
-
-          <!-- Content -->
-          <div class="mb-4">
-            <label for="postContent" class="form-label fw-semibold">
-              Post Content
-            </label>
-
-            <textarea
-              class="form-control"
-              id="postContent"
-              rows="8"
-              placeholder="Write your story here..."
-              name="content"
-            ></textarea>
-          </div>
-
-          <!-- Buttons -->
-          <div class="d-flex gap-2">
-            <button type="submit" class="btn btn-success px-4">
-              <i class="fa-solid fa-paper-plane me-2"></i>
-              Publish Post
-            </button>
-
-            <button type="button" class="btn btn-outline-secondary px-4">
-              Save as Draft
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
+    <!-- ================= DASHBOARD CONTENT ================= -->
 
     <!-- supabase JS -->
     <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
@@ -386,10 +296,10 @@
     <script src="../supabase.js"></script>
 
     <!-- dashboard JS -->
-    <script src="../js/dashboard.js"></script>
+     <script src="../js/dashboard.js"></script>
 
-    <!-- create JS -->
-     <script src="../js/createPost.js"></script>
-    
+    <!-- myPost JS -->
+    <script src="../js/myPost.js"></script>
+
   </body>
 </html>
